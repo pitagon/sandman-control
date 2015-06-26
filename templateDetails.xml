@@ -43,6 +43,8 @@
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_sandmanctrl.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_sandmanctrl.sys.ini</language>
+		<language tag="es-ES">en-GB/en-GB.tpl_sandmanctrl.ini</language>
+		<language tag="es-ES">en-GB/en-GB.tpl_sandmanctrl.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
