@@ -161,6 +161,7 @@ $showhelp = $this->params->get('showhelp');
 		.nav-tabs > li > a:hover, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover { color: <?php echo $active_text_color; ?>; }
 		a { color: <?php echo $body_link_color; ?>; }
 		
+		#menu > li.active {background-color: <?php echo $active_bg_color; ?>;}
 		#menu > li, .nav-tabs > li > a { background-color: <?php echo $tab_bg_color; ?>; }
 		#menu > li a, .nav-tabs > li > a { color: <?php echo $tab_text_color; ?>; }
 
@@ -200,37 +201,24 @@ $showhelp = $this->params->get('showhelp');
 
 <div id="sc-header" style="line-height: 1;">
 	<div class="sc-container" style="line-height: 1;">
+		<div id="sc-status-container">
+			<?php $sctrl->displayStatus(); ?>
+ 			<!-- <ul>
+				<li><a href="#">View Site</a></li>
+			</ul> -->
+			<?php $sctrl->displayUserInfo(); ?>
+			<div class="clear"></div>
+		</div> <!-- end #sc-status -->
 		<div style="display: inline-block;">
 			<img src="<?php echo $logo; ?>" class="sc-logo" />
 			<h1 class="admin-title" style="margin-bottom: 18px;"><?php echo $admin_title_text; ?></h1>
-		
-		<div class="clear"></div>
-		
-
-		
+		</div>
+		<div class=""></div>
 
 		<div id="sc-nav">
 			<?php $sctrl->displayMenu(); ?>
 			<div class="clear"></div>
 		</div> <!-- end #sc-nav -->
-		</div>
-
-		<div id="sc-status-container">
-			<?php $sctrl->displayStatus(); ?>
- 			<!-- <ul>
-				<li><a href="#">View Site</a></li>
-				
-			</ul> -->
-			<?php $sctrl->displayUserInfo(); ?>
-			<div class="clear"></div>
-		</div> <!-- end #sc-status -->
-
-
-
-
-
-
-
 	</div>
 	<div class="clear"></div>
 </div>
