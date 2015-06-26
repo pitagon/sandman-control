@@ -9,10 +9,8 @@ body { padding-top: 0; }
 	margin: 0 15px;
 }
 
-.sc-logo {
-	margin-top: 15px;
-	margin-bottom: 5px;
-}
+.sc-logo{padding:10px 0;overflow:hidden}
+img.sc-logo{width:auto;height:53px;margin:0;float:left}
 
 .userinfo {
 	color: #fff;
@@ -47,9 +45,9 @@ body { padding-top: 0; }
 
 #sc-nav { 
 	display: inline-block; 
-	margin-bottom: -4px; 
+	margin-bottom: 1px; 
 	position: relative;
-	top: 3px;
+	top: 2px;
 }
 
 /* SESSION
@@ -370,3 +368,6 @@ border-color: #4cae4c;
 /* Misc */
 
 .clear { clear: both; }
+h1.admin-title {
+    font-size: 29px !important;
+}
