@@ -203,6 +203,16 @@ class SCAdminCssMenu extends JObject
 		{
 			$class = ' class="dropdown-submenu"';
 		}
+		
+		if (SCAdminCSSMenu::_isActive($this->_current->title))
+		{	
+			$class .= ' class="active"';
+		}
+		
+		if (SCAdminCSSMenu::_isActive($this->_current->title) && $this->_current->hasChildren())
+		{	
+			$class = ' class="active dropdown"';
+		}
 
 		if ($this->_current->class == 'disabled')
 		{
@@ -343,6 +353,48 @@ class SCAdminCssMenu extends JObject
 
 		return $classes[$identifier];
 	}
+	
+	function _isActive($toplevel) {
+	
+		$option = JRequest::getString('option');		
+	
+		
+		switch ($toplevel) {
+
+		
+			case JText::_('MOD_MENU_CONTROL_PANEL'):
+				if ($option == 'com_cpanel') return true;
+				break;
+				
+			case JText::_('MOD_MENU_COM_CONTENT'):
+				if ($option == 'com_content' OR $option == 'com_categories' OR $option == 'com_media') return true;
+				break;
+				
+			case JText::_('MOD_MENU_MENUS'):
+				if ($option == 'com_menus') return true;
+				break;
+				
+			case JText::_('MOD_MENU_COM_USERS_USERS'):
+				if ($option == 'com_users') return true;
+				break;
+				
+			case JText::_('MOD_MENU_EXTENSIONS_EXTENSIONS'):
+				if ($option == 'com_installer' OR $option == 'com_modules' OR $option == 'com_messages' OR $option == 'com_plugins' OR $option == 'com_templates' OR $option == 'com_languages' OR $option == 'com_banners' OR $option == 'com_contact' OR $option == 'com_newsfeeds' OR $option == 'com_search' OR $option == 'com_weblinks' OR $option == 'com_akeeba' OR $option == 'com_jce' OR $option == 'com_k2' OR $option == 'com_acymailing' OR $option == 'com_finder') return true;
+				break;
+				
+			case JText::_('MOD_MENU_CONFIGURATION'):
+				if ($option == 'com_config') return true;
+				break;
+		
+			case JText::_('MOD_MENU_HELP'):
+				if ($option == 'com_admin') return true;
+				break;
+		
+		}
+		return false;
+		
+	}
+
 }
 
 /**
