@@ -117,12 +117,19 @@ else
 		}
 
 		#sc-login-form fieldset .control-group .btn.btn-primary.btn-large:hover {
-		    background: none repeat scroll 0 0 <?php echo $hover_bg_color; ?>;
+		    background: none repeat scroll 0 0 <?php echo $special_bg_color ?>;
 		    border: medium none;
-		    padding: 7px 27px;
+		    padding: 8px 19px;
+			font-size: 20px;
+		}
+		#sc-login-form fieldset .control-group .btn.btn-primary.btn-large {
+			background: none repeat scroll 0 0 <?php echo $active_bg_color;; ?>;
+		    border: medium none;
+		    padding: 8px 19px;
+			font-size: 20px;
 		}
 
-		#sc-header .sc-status .frontend { background-color: <?php echo $special_bg_color; ?>; }
+		#sc-header .sc-status .frontend { background-color: <?php echo $special_bg_color; ?>; list-style-type: none; }
 		#sc-header .sc-status .frontend a { color: <?php echo $special_text_color; ?>; }
 		#sc-header .sc-status a:hover { background-color: <?php echo $hover_bg_color; ?>; }
 		#sc-login #sc-logo .admin-title {
@@ -140,7 +147,7 @@ else
 		</div>
 		<div id="sc-logo">
 			<img src="<?php echo $logo; ?>" class="sc-logo" />
-			<h1 class="admin-title">Administrator Login</h1>
+			<h1 class="admin-title"><?php echo JText::_('TPL_SANDMANCONTROL_ADMINAREA') ?></h1>
 		</div>
 	</header>
 	<div id="sc-login-form">
