@@ -22,7 +22,7 @@ $lang = JFactory::getLanguage();
  * Dashboard
  */
 // $menu->addChild(new SCMenuNode(JText::_('MOD_MENU_CONTROL_PANEL'), 'index.php?option=com_config', 'class:config'));
-$menu->addChild(new SCMenuNode(JText::_('Dashboard'), './', 'class:config'));
+$menu->addChild(new SCMenuNode(JText::_('MOD_MENU_CONTROL_PANEL'), './', 'class:config'));
 
 /*
  * Site Submenu
@@ -132,7 +132,7 @@ if ($user->authorise('core.manage', 'com_users'))
 if ($user->authorise('core.manage', 'com_content'))
 {
 	// $menu->addChild(new SCMenuNode(JText::_('MOD_MENU_COM_CONTENT'), '#'), true);
-	$menu->addChild(new SCMenuNode(JText::_('Article'), '#'), true);
+	$menu->addChild(new SCMenuNode(JText::_('MOD_MENU_COM_CONTENT'), '#'), true);
 	$createContent = $shownew && $user->authorise('core.create', 'com_content');
 	$menu->addChild(new SCMenuNode(JText::_('MOD_MENU_COM_CONTENT_ARTICLE_MANAGER'), 'index.php?option=com_content', 'class:article'), $createContent);
 
@@ -374,7 +374,7 @@ $lm = $user->authorise('core.manage', 'com_languages');
 if ($im || $mm || $pm || $tm || $lm)
 {
 	// $menu->addChild(new SCMenuNode(JText::_('MOD_MENU_EXTENSIONS_EXTENSIONS'), '#'), true);
-	$menu->addChild(new SCMenuNode(JText::_('Extend'), '#'), true);
+	$menu->addChild(new SCMenuNode(JText::_('MOD_MENU_EXTENSIONS_EXTENSIONS'), '#'), true);
 
 	if ($im)
 	{
@@ -437,7 +437,7 @@ if ($components)
 	$menu->getParent();
 }
 
-$menu->addChild(new SCMenuNode(JText::_('Configure'), 'index.php?option=com_config', 'class:config'));
+$menu->addChild(new SCMenuNode(JText::_('MOD_MENU_CONFIGURATION'), 'index.php?option=com_config', 'class:config'));
 
 
 /*
